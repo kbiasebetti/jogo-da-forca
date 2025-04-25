@@ -2,7 +2,6 @@
 {
     internal class Program
     {
-        // Versão 05: Escolher uma palavra aleatória
         static void Main(string[] args)
         {
             string[] paises = [
@@ -60,79 +59,7 @@
                     Console.WriteLine("|     Países    |");
                     Console.WriteLine("--------------------");
 
-                    if (quantidadeErros == 0)
-                    {
-                        Console.WriteLine(" ___________        ");
-                        Console.WriteLine(" |/                 ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine("_|____              ");
-                    }
-
-                    else if (quantidadeErros == 1)
-                    {
-                        Console.WriteLine(" ___________        ");
-                        Console.WriteLine(" |/                 ");
-                        Console.WriteLine(" |         O        ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine("_|____              ");
-                    }
-                    else if (quantidadeErros == 2)
-                    {
-                        Console.WriteLine(" ___________        ");
-                        Console.WriteLine(" |/                 ");
-                        Console.WriteLine(" |         O        ");
-                        Console.WriteLine(" |         x        ");
-                        Console.WriteLine(" |         x        ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine("_|____              ");
-                    }
-                    else if (quantidadeErros == 3)
-                    {
-                        Console.WriteLine(" ___________        ");
-                        Console.WriteLine(" |/                 ");
-                        Console.WriteLine(" |         O        ");
-                        Console.WriteLine(" |        /x\\      ");
-                        Console.WriteLine(" |         x        ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine("_|____              ");
-                    }
-                    else if (quantidadeErros == 4)
-                    {
-                        Console.WriteLine(" ___________        ");
-                        Console.WriteLine(" |/                 ");
-                        Console.WriteLine(" |         O        ");
-                        Console.WriteLine(" |        /x\\      ");
-                        Console.WriteLine(" |         x        ");
-                        Console.WriteLine(" |        / \\      ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine("_|____              ");
-                    }
-                    else if (quantidadeErros == 5)
-                    {
-                        Console.WriteLine(" ___________        ");
-                        Console.WriteLine(" |/                 ");
-                        Console.WriteLine(" |         O        ");
-                        Console.WriteLine(" |        /x\\      ");
-                        Console.WriteLine(" |         x        ");
-                        Console.WriteLine(" |        / \\      ");
-                        Console.WriteLine(" |        ---       ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine("_|____              ");
-                    }
+                    
 
                     Console.WriteLine("\n");
                     Console.WriteLine("Erros do jogador: " + quantidadeErros);
