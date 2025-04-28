@@ -4,7 +4,8 @@
 	{
 		static void Main(string[] args)
 		{
-
+			var jogo = new JogoDaForca();
+			jogo.ComecarJogo();
 		}
 	}
 }

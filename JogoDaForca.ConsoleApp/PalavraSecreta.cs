@@ -1,33 +1,29 @@
-using System;
-using System.IO;
+namespace JogoDaForca.ConsoleApp;
 
-namespace JogoDaForca.ConsoleApp
+public class PalavraSecreta
 {
-	public class PalavraSecreta
+	private string[] palavras;
+	private string palavraEscolhida;
+
+	public PalavraSecreta()
 	{
-		private string[] palavras;
-		private string palavraEscolhida;
-
-		public PalavraSecreta()
+		if (File.Exists("palavras.txt"))
 		{
-			if (File.Exists("palavras.txt"))
-			{
-				palavras = File.ReadAllLines("palavras.txt")
-			}
-			else
-			{
-                Console.WriteLine("ERRO: O banco de palavras não foi encontrado!")
-			}
+			palavras = File.ReadAllLines("palavras.txt");
 		}
-
-		public string EscolherPalavra()
+		else
 		{
-			Random geradorDePalavra = new Random();
-			int indicePalavraEscolhida = geradorDePalavra.Next(palavras.Length);
-
-			palavraEscolhida = palavras[indicePalavraEscolhida].ToUpper().Trim();
-
-			return palavraEscolhida;
+			Console.WriteLine("ERRO: O banco de palavras não foi encontrado!");
 		}
+	}
+
+	public string EscolherPalavra()
+	{
+		Random geradorDePalavra = new Random();
+		int indicePalavraEscolhida = geradorDePalavra.Next(palavras.Length);
+
+		palavraEscolhida = palavras[indicePalavraEscolhida].ToUpper().Trim();
+
+		return palavraEscolhida;
 	}
 }
