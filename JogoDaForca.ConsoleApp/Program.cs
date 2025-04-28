@@ -4,45 +4,13 @@
     {
         static void Main(string[] args)
         {
-            string[] paises = [
-                "BRASIL",
-                "ARGENTINA",
-                "CHILE",
-                "COLOMBIA",
-                "MEXICO",
-                "ESPANHA",
-                "PORTUGAL",
-                "FRANCA",
-                "ITALIA",
-                "ALEMANHA",
-                "RUSSIA",
-                "CHINA",
-                "JAPAO",
-                "COREIA",
-                "INDIA",
-                "AUSTRALIA",
-                "CANADA",
-                "INGLATERRA",
-                "IRLANDA",
-                "EGITO",
-                "MARROCOS",
-                "NIGERIA",
-                "ANGOLA",
-                "TURQUIA",
-                "GRECIA",
-                "SUECIA",
-                "NORUEGA",
-                "FINLANDIA"
-            ];
+            
 
             while (true)
             {
-                Random geradorDePalavras = new Random();
-                int indicePalavraEscolhida = geradorDePalavras.Next(paises.Length);
+                
 
-                string palavraEscolhida = paises[indicePalavraEscolhida];
-
-                char[] letrasEncontradas = new char[palavraEscolhida.Length];
+                
 
                 for (int caractere = 0; caractere < letrasEncontradas.Length; caractere++)
                     letrasEncontradas[caractere] = '_';
@@ -89,34 +57,6 @@
 
                     jogadorAcertou = palavraEncontrada == palavraEscolhida;
                     jogadorEnforcou = quantidadeErros > 5;
-
-                    if (jogadorAcertou)
-                    {
-                        Console.WriteLine("\n");
-                        Console.WriteLine($"Parabéns, você acertou a palavra secreta!");
-                        Console.WriteLine($"A palavra era {palavraEscolhida}");
-                    }
-                    else if (jogadorEnforcou)
-                    {
-                        Console.Clear();
-                        Console.WriteLine("--------------------");
-                        Console.WriteLine("| Jogo da Forca |");
-                        Console.WriteLine("|     Países    |");
-                        Console.WriteLine("--------------------");
-                        Console.WriteLine(" ___________        ");
-                        Console.WriteLine(" |/        |        ");
-                        Console.WriteLine(" |         O        ");
-                        Console.WriteLine(" |        /x\\      ");
-                        Console.WriteLine(" |         x        ");
-                        Console.WriteLine(" |        / \\      ");
-                        Console.WriteLine(" |        ---       ");
-                        Console.WriteLine(" |                  ");
-                        Console.WriteLine("_|____              ");
-                        Console.WriteLine("\n");
-                        Console.WriteLine("Que pena, você perdeu!");
-                        Console.WriteLine($"A palavra era {palavraEscolhida}");
-                    }
-                } while (jogadorEnforcou == false && jogadorAcertou == false);
 
                 Console.ReadLine();
             }
